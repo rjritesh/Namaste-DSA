@@ -18,5 +18,5 @@ function secondLargest(arr) {
 return secondLargest;
 }
 
-let array = [];
+let array = [122,324,56,78];
 console.log( secondLargest(array));
