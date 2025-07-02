@@ -44,18 +44,56 @@ console.log("---------------------------------------------------------------");
     console.log(row);
   }
 }
+
+console.log("---------------------------------------------------------------");
+{
+  let n = 5;
+  for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n - (i + 1); j++) {
+      row = row + " ";
+    }
+    for (let k = 0; k < i + 1; k++) {
+      row = row + "*";
+    }
+    console.log(row);
+  }
+}
+
 console.log("---------------------------------------------------------------");
 
 {
   let n = 5;
   for (let i = 0; i < n; i++) {
     let row = "";
-    for (let j = 0; j < (n + 1) - i; j++) {
-      row = row + " ";
+    toggle = 1;
+    for (let j = 0; j < i + 1; j++) {
+      row = row + " " + toggle;
+      if (toggle === 1) {
+        toggle = 0;
+      } else {
+        toggle = 1;
+      }
     }
     console.log(row);
   }
-  for(let k = 0; k < n -1; k++){
-    console.log("*");
+}
+
+console.log("-------------");
+
+{
+  let n = 5;
+  toggle = 1;
+  for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < i + 1; j++) {
+      row = row + " " + toggle;
+      if (toggle === 1) {
+        toggle = 0;
+      } else {
+        toggle = 1;
+      }
+    }
+    console.log(row);
   }
 }
