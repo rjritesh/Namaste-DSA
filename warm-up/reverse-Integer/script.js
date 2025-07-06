@@ -8,6 +8,7 @@ function reverseInteger(x) {
     rev = rev * 10 + rem;
     x = Math.floor(x / 10);
   }
+  
   if (xcopy <  0 ) {
     return -rev;
   } else {
