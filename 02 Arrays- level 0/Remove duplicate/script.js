@@ -11,5 +11,5 @@ function removeDuplicate(arr){
   return x+1;
 }
 
-let array = [0,0,1,1,1,2,2,3,3,4]
+let array = [0,0,1,1,1,1,2,2,3,3,4]
 console.log(removeDuplicate(array));
