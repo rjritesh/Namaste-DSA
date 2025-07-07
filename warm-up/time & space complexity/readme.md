@@ -13,3 +13,4 @@
 
 ## Time complexity priorities
 >> O(log<sub>n</sub>) > O(n) > O(<sub>n</sub>logn) > O(n<sup>2</sup>) > O(n<sup>3</sup>) > O(2<sup>n</sup>) > O(n!) 
+![alt text](image.png)
