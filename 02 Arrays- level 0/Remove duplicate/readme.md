@@ -3,7 +3,11 @@
 
 ### Approach--
 > Two pointer approach--- x will keep the track of last unique element's position
+
 > First we initialize x = 0 because first element is alway unique in sorted array.
+
 > if nums[i] == nums[x] → duplicate → skip
+
 > if nums[i] > nums[x] → new unique value → move forward and update
+
 > if nums[i] > nums[x] then  x = x + 1 & nums[x] = nums[i] means if nums[i] > nums[x] then x will move forward to next index.
