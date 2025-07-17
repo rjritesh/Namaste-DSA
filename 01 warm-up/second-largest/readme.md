@@ -1,41 +1,42 @@
-## 🧮 Problem: Find Second Largest Element in an Array
+## 🥈 Problem: Find the Second Largest Element in an Array
 
-### 🔍 Description
-Given an array of integers, find the **second largest unique element**.  
-If such an element does not exist (e.g., all elements are equal or only one element exists), return `-1`.
+### 🔍 Description  
+Write a function `secondLargest(arr)` that returns the **second largest** number from the input array.
+
+> If the array has less than 2 distinct elements, return an appropriate message.
 
 ---
 
 ### 💡 Approach
 
-We solve this problem using a **single-pass traversal** and two tracking variables:
+We use a **single-pass linear scan**:
+- Keep track of both the **largest** and the **second largest** elements during traversal.
 
-- `largest`: stores the largest number seen so far
-- `secondLargest`: stores the second largest number
+#### 🛠️ Steps:
 
-#### 🛠️ Logic:
-
-1. Initialize both variables to `-Infinity`.
-2. Traverse the array:
-   - If the current element is greater than `largest`:
-     - Assign `secondLargest = largest` **before** updating `largest`.  
-       ✅ **Reason:** This stores the old largest value which is now the second largest.
-     - Then update `largest = current number`.
-   - Else if the current element is between `largest` and `secondLargest`, and not equal to `largest`, update `secondLargest`.
-3. After the loop:
-   - If `secondLargest` is still `-Infinity`, return `-1` (no valid second largest).
+1. Initialize `largest = -Infinity` and `secondLargest = -Infinity`.
+2. Loop through each element:
+   - If current element > `largest`:  
+     - Set `secondLargest = largest`
+     - Update `largest` to current element
+   - Else if current element > `secondLargest` **and not equal** to `largest`:
+     - Update `secondLargest` to current element
+3. Return `secondLargest` at the end.
 
 ---
 
 ### 📈 Time and Space Complexity
 
-- **Time Complexity:** O(n) – Single pass through the array.
-- **Space Complexity:** O(1) – No extra space used, just variables.
+- **Time Complexity:** O(n) — Only one loop through the array.
+- **Space Complexity:** O(1) — No extra space used.
 
 ---
 
 ### ✅ Example
 
 ```js
-Input:  [12, 10, 30, 203]
-Output: 30
+Input:  [122, 324, 56, 78]
+Output: 122
+
+Input:  [99, 99, 99]
+Output: -Infinity or message (no second largest)
