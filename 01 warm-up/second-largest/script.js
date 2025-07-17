@@ -1,22 +1,42 @@
-// WAP to find the second largest element of an array--
-// Approach--- You should have to maintain two variable - 1. secondLargest 2. largest and keeep on updating 
-function secondLargest(arr) {
+## 🥈 Problem: Find the Second Largest Element in an Array
 
-  if(arr.length == 0){
-    return "Array is empty!!"
-  }
-  let largest = -Infinity;
-  let secondLargest = -Infinity;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      secondLargest = largest;
-      largest = arr[i];
-    } else if(arr[i] > secondLargest && arr[i] != largest){
-      secondLargest = arr[i];
-    }
-  }
-return secondLargest;
-}
+### 🔍 Description  
+Write a function `secondLargest(arr)` that returns the **second largest** number from the input array.
 
-let array = [122,324,56,78];
-console.log( secondLargest(array));
+> If the array has less than 2 distinct elements, return an appropriate message.
+
+---
+
+### 💡 Approach
+
+We use a **single-pass linear scan**:
+- Keep track of both the **largest** and the **second largest** elements during traversal.
+
+#### 🛠️ Steps:
+
+1. Initialize `largest = -Infinity` and `secondLargest = -Infinity`.
+2. Loop through each element:
+   - If current element > `largest`:  
+     - Set `secondLargest = largest`
+     - Update `largest` to current element
+   - Else if current element > `secondLargest` **and not equal** to `largest`:
+     - Update `secondLargest` to current element
+3. Return `secondLargest` at the end.
+
+---
+
+### 📈 Time and Space Complexity
+
+- **Time Complexity:** O(n) — Only one loop through the array.
+- **Space Complexity:** O(1) — No extra space used.
+
+---
+
+### ✅ Example
+
+```js
+Input:  [122, 324, 56, 78]
+Output: 122
+
+Input:  [99, 99, 99]
+Output: -Infinity or message (no second largest)
