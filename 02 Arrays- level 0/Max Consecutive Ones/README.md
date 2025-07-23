@@ -11,7 +11,7 @@ Given a binary array `nums`, return the **maximum number of consecutive 1s** in 
 ### 💡 Approach
 
 We use a **simple loop** to track consecutive `1`s:
-- Maintain a counter `count` for current streak of 1s.
+- Maintain two counters `count` for current streak of 1s and `maxCount`.
 - Update `maxCount` whenever a `0` is encountered or at the end of the loop.
 
 #### 🛠️ Steps:
