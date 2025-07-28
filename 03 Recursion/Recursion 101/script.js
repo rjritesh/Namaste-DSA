@@ -1,5 +1,4 @@
 //print n to 1
-
 function print(n) {
   if (n < 0) return;
 
@@ -7,18 +6,20 @@ function print(n) {
   n = n - 1;
   print(n);
 }
-
 (print(10));
 
+
+
+
 //print 1 to n
-
-function prints(nums, i) {
+let i = 10
+function prints(nums) {
  
-  if (i > nums) return;
+  if ( nums > i) return;
 
-  console.log(i);
-  i = i + 1
-  prints(nums,i)
+  console.log(nums);
+  nums = nums + 1
+  prints(nums)
 }
 
-prints(10,1)
+prints(1)
