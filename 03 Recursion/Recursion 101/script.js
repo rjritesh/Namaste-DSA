@@ -1,10 +1,24 @@
-function print(n){
-  if(n === 0) return;
+//print n to 1
 
-console.log(n);
-n = n - 1;
-print(n);
+function print(n) {
+  if (n < 0) return;
 
+  console.log(n);
+  n = n - 1;
+  print(n);
 }
 
-console.log(print(10));
+(print(10));
+
+//print 1 to n
+
+function prints(nums, i) {
+ 
+  if (i > nums) return;
+
+  console.log(i);
+  i = i + 1
+  prints(nums,i)
+}
+
+prints(10,1)
