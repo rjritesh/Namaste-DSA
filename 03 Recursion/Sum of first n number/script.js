@@ -3,4 +3,4 @@ function sum (nums){
 
   return nums + sum(nums - 1)
 }
- console.log(sum(5));
+ console.log("The sum of first 5 numbers is",sum(5));
