@@ -29,11 +29,9 @@ We use the **mathematical formula** to calculate the expected sum of first `n` n
 
 ---
 
-### ✅ Example
+### ✅ Imagination
 
 ```js
-Input:  [3, 0, 1, 2, 5, 4]
-Output: 6
-
-Input:  [0, 1]
-Output: 2
+result = 0 ^ 4 ^ (1 ^ 1) ^ (2 ^ 2)
+       = 0 ^ 4 ^ 0 ^ 0
+       = 4
