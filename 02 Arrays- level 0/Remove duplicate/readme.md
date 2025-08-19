@@ -9,6 +9,8 @@ The function should:
 - Work without using any extra space (O(1) space complexity).
 
 ---
+### 💡 Intution
+Array is sorted , it means if the consecutive elements are duplicate then the next elem is not greater than previous elem.
 
 ### 💡 Approach
 
