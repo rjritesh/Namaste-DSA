@@ -1,19 +1,16 @@
-function sort(arr) {
-  let n = arr.length;
-  let swapped = false;
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n - 1 - i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-        swapped = true;
+function bubbleSort(nums){
+  let n = nums.length;
+  for(let i = 0; i < n - 1; i++){
+    for(j = 0; j < n - 1 - i; j++){
+      if(nums[j] > nums[j + 1]){
+        let temp = nums[j];
+        nums[j] = nums[j + 1];
+        nums[j + 1] = temp;
       }
     }
-    if(!swapped) break;
   }
-  return arr;
+  return nums;
 }
 
-let array = [5, 4, 9, 15, 10, 0];
-console.log(sort(array))
+let arr = [ 5, 2, 4, 1];
+console.log(bubbleSort(arr));
