@@ -36,15 +36,7 @@ function sort(arr1, arr2) {
       j++;
     }
   }
-  while(i < arr1.length){
-    sorted.push(arr1[i]);
-    i++;
-  }
-  while(j < arr2.length){
-    sorted.push(arr2[j]);
-    j++;
-  }
-  return sorted;
+  return [...sorted, ...arr1.slice(i), ...arr2.slice(j)];
 }
 
 let a1 = [ 1,3,5,7];
