@@ -1,8 +1,8 @@
-function bubbleSort(nums){
+function bubbleSort (nums){
   let n = nums.length;
-  for(let i = 0; i < n - 1; i++){
+  for(let i = 0; i < n ; i++){
     let swapped = false;
-    for(j = 0; j < n - 1 - i; j++){
+    for(let j = 0; j < n; j++){
       if(nums[j] > nums[j + 1]){
         let temp = nums[j];
         nums[j] = nums[j + 1];
@@ -15,5 +15,5 @@ function bubbleSort(nums){
   return nums;
 }
 
-let arr = [1,2,3,4,5];
+let arr = [ 13, 46, 24, 52, 20,9];
 console.log(bubbleSort(arr));
