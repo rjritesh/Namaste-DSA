@@ -1,21 +1,17 @@
-function sort(nums) {
-  let n = nums.length;
-
-  for (let i = 0; i < n; i++) {
-    let min = i;
-    for (let j = i + 1; j < n; j++) {
-      if (nums[j] < nums[min]) {
-        min = j;
+function selectionSort(nums) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    let minIndex = i;
+    for (let j = i; j < nums.length; j++) {
+      if (nums[j] < nums[minIndex]) {
+        minIndex = j;
       }
     }
-    if (i != min) {
-      let temp = nums[i];
-      nums[i] = nums[min];
-      nums[min] = temp;
-    }
+    let temp = nums[minIndex];
+    nums[minIndex] = nums[i];
+    nums[i] = temp;
   }
   return nums;
 }
 
-let arr = [14,5,1];
-console.log(sort(arr))
+let arr = [ 64,25, 12, 22, 11]
+console.log(selectionSort(arr));
