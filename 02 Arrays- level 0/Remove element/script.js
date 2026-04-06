@@ -3,13 +3,10 @@
 function removeElem (arr, val){
 let x = 0;
 for(let i = 0; i < arr.length; i++){
-  if(arr[i] === val ){
-
-  }
-  else{
-    arr[x] = arr[i];
-    x++;
-  }
+ if( arr[i] !== val){
+  arr[x] = arr[i];
+  x++
+ }
 }
 return x
 }
